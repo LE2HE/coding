@@ -11,14 +11,11 @@ public class P1546 {
             A[i] = s.nextInt();
         }
         long max = 0;
-        for (int i=0;i<N;i++) {
+        long sum = 0;
+        for(int i=0;i<N;i++) {
             if (max < A[i]) max = A[i];
+            sum = sum + A[i];
         }
-        double sum = 0.0;
-        for (int i=0;i<N;i++) {
-            double val = (double)A[i] / max * 100;
-            sum += val;
-        }
-        System.out.println(sum / N);
+        System.out.println(sum * 100.0 / max / N);
     }
 }
